@@ -8,13 +8,13 @@ int main(){
         for (int j = 0; j < 2*n-1; j++) //แถวแนวนอน//
         {
             if (j>i && i+j<2*n-2)            
-                printf(" ");
+                printf("  ");
             else if (j<i && i+j>2*n-2)           
-                printf(" ");
+                printf("  ");
             else
-                printf("*");
+                printf("* ");
         }
         printf("\n");
     }
-        
+    return 0;
 }
