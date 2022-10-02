@@ -1,11 +1,7 @@
 #include<stdio.h>
 
-float BMI(float h,float w)
-{
-    int BMI=1;
-    BMI=w/(h*h);
-    return BMI;
-}
+float BMI(float h,float w);
+void check(int BMI);
 
 int main(){
     float h,w;
@@ -14,6 +10,18 @@ int main(){
     printf("Enter weight (kg): ");
     scanf("%f",&w);
     printf("BMI : %.2f\n",BMI(h,w));
+    check(BMI(h,w));
+}
+
+float BMI(float h,float w)
+{
+    int BMI=1;
+    BMI=w/(h*h);
+    return BMI;
+}
+
+void check(int BMI)
+{
     if (BMI<18.5)
     {
         printf("Underweight");
@@ -30,5 +38,4 @@ int main(){
     {
         printf("Obesity");
     }
-    return 0 ;
 }
